@@ -1,8 +1,9 @@
-#include <windows.h>
-#include <iostream>
-#include <stdlib.h>
-#include <conio.h>
- 
+#include <windows.h>/*incluye gran cantidad de cabeceras, ya que nuchas lineas no pueden inluirse por si mismas por dependencia */
+#include <iostream>/*nos permite organizar el codigo en grpos logicos, asi para evitar conflintos en nombres */
+#include <stdlib.h>/*nos permte un entero a una cadena de caracteristicas */
+#include <conio.h>/*nos incluye funciones especificas para el control de entrada*/
+ /*librerias que se usan es c++ para diferentes funciones, cada libreria tiene como fin hacer algo en especifico */
+
 #define ARRIBA 72
 #define IZQUIERDA 75
 #define DERECHA 77
