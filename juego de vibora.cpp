@@ -11,13 +11,14 @@
 #define DERECHA 77
 #define ABAJO 80
 #define ESC 27
+/*Estas constantes permiten utilizar nombres más intuitivos en lugar de valores numéricos directos, lo que facilita la comprensión y el mantenimiento del código. */
  
 int cuerpo[200][2];
 int n = 1, tam = 10, dir = 3;
 int x = 10, y = 12;
 int xc = 30, yc = 15;
 int velocidad = 60;
-char tecla;
+
  
 void gotoxy(int x, int y) 
 { 
