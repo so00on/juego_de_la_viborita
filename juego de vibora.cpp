@@ -4,6 +4,8 @@
 #include <conio.h>/*nos incluye funciones especificas para el control de entrada*/
  /*librerias que se usan es c++ para diferentes funciones, cada libreria tiene como fin hacer algo en especifico */
 
+
+/*FUNCION DEFINE es la asociacion de un identificador que parametiza con una cadena token */
 #define ARRIBA 72
 #define IZQUIERDA 75
 #define DERECHA 77
