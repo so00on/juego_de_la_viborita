@@ -72,17 +72,7 @@ void borrar_cuerpo()/*se encarga de borrar la posición actual del cuerpo de la 
 {
      gotoxy(cuerpo[n][0] , cuerpo[n][1]); printf(" ");
     }
-void teclear(){
-     if(kbhit()){
-            tecla = getch();
-            switch(tecla){
-                case ARRIBA : if(dir != 2) dir = 1; break;
-                case ABAJO : if(dir != 1) dir = 2; break;
-                case DERECHA : if(dir != 4) dir = 3; break;
-                case IZQUIERDA : if(dir != 3) dir = 4; break;
-           }
-     }
-}
+
 void comida()
 {
      if(x == xc && y == yc)
