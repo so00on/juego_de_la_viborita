@@ -53,8 +53,10 @@ void pintar()/*se encarga de dibujar un marco rectangular en la consola de texto
      gotoxy (2,23);    printf ("%c", 200);
      gotoxy (77,3);    printf ("%c", 187);
      gotoxy(77,23);    printf ("%c", 188); 
-     }  
-void guardar_posicion(){
+     } 
+
+void guardar_posicion()/*se encarga de almacenar la posición actual de un elemento en el juego. A medida que se almacenan nuevas posiciones, se avanza en el índice del arreglo, y cuando se llega al límite, se comienza a sobrescribir las posiciones más antiguas. Esto puede ser útil para llevar un registro de los movimientos pasados en juegos o aplicaciones que requieren un historial de posiciones.*/
+{
      cuerpo[n][0] = x;
      cuerpo[n][1] = y;
      n++;
@@ -62,7 +64,7 @@ void guardar_posicion(){
 }
 void dibujar_cuerpo(){
       for(int i = 1; i < tam; i++){
-      gotoxy(cuerpo[i][0] , cuerpo[i][1]); printf("*");
+      gotoxy(cuerpo[i][0] , cuerpo[i][1]); printf("+");
      }
 }
 void borrar_cuerpo(){
