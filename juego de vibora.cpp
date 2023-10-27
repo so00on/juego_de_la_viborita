@@ -104,12 +104,12 @@ bool game_over()/*verifica si el juego ha llegado a su fin, ya sea debido a una 
      }
     return true;
 }
-int main()
+int main()/*controla el flujo principal del juego FULL SNAKE en la consola, incluyendo la gestión del cursor, el dibujo de elementos en la pantalla, la detección de teclas presionadas y la lógica del juego. El juego continúa hasta que se presiona la tecla "ESC" o se cumple una condición de finalización definida por la función game_over().*/
 {
     OcultaCursor();
  
     pintar();
-   gotoxy(xc, yc); printf("%c", 4)
+   gotoxy(xc, yc); printf("%c", 4);
  
     while(tecla != ESC && game_over())
     {
