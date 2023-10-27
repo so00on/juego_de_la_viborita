@@ -33,12 +33,27 @@ void gotoxy(int x, int y)
     hCon = GetStdHandle(STD_OUTPUT_HANDLE); 
     SetConsoleCursorPosition(hCon,dwPos); /*Obtiene el manejador de la salida estándar (consola) y lo almacena en la variable hCon. Esto permite interactuar con la consola.*/
 }
-void OcultaCursor() {
+void OcultaCursor() /*configura la información del cursor de la consola para que tenga un tamaño grande y lo oculta, de manera que no sea visible durante la ejecución del programa en la consola. Esto puede mejorar la presentación de la interfaz de usuario y la visualización de la información en la pantalla.*/
+ {
     CONSOLE_CURSOR_INFO cci = {100, FALSE};
  
     SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cci);
 }
- 
+void pintar()/*se encarga de dibujar un marco rectangular en la consola de texto, lo que puede ser útil para mejorar la presentación visual de la interfaz de usuario en una aplicación de consola.*/
+{  
+     for(int i=2; i < 78; i++){
+        gotoxy (i, 3); printf ("%c", 205);
+        gotoxy(i, 23); printf ("%c", 205); 
+        }
+     for(int v=4; v < 23; v++){
+        gotoxy (2,v);  printf ("%c", 186);
+        gotoxy(77,v);  printf ("%c", 186); 
+        }
+     gotoxy  (2,3);    printf ("%c", 201);
+     gotoxy (2,23);    printf ("%c", 200);
+     gotoxy (77,3);    printf ("%c", 187);
+     gotoxy(77,23);    printf ("%c", 188); 
+     }  
 void guardar_posicion(){
      cuerpo[n][0] = x;
      cuerpo[n][1] = y;
