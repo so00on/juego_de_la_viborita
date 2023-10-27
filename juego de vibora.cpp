@@ -109,7 +109,7 @@ int main()
     OcultaCursor();
  
     pintar();
-   gotoxy(xc, yc); printf("%c", 4);
+   gotoxy(xc, yc); printf("%c", 4)
  
     while(tecla != ESC && game_over())
     {
