@@ -62,12 +62,14 @@ void guardar_posicion()/*se encarga de almacenar la posición actual de un eleme
      n++;
      if(n == tam) n = 1;
 }
-void dibujar_cuerpo(){
+void dibujar_cuerpo()/*se encarga de dibujar el cuerpo y ademas el bucle for hace incrementar al cuerpo a medida que se va ganando puntos */
+{
       for(int i = 1; i < tam; i++){
       gotoxy(cuerpo[i][0] , cuerpo[i][1]); printf("+");
      }
 }
-void borrar_cuerpo(){
+void borrar_cuerpo()/*se encarga de borrar la posición actual del cuerpo de la vibora. Esto se logra posicionando el cursor en la ubicación actual del cuerpo y reemplazando ese espacio con un espacio en blanco, lo que simula el borrado del contenido en esa ubicación en la pantalla.*/
+{
      gotoxy(cuerpo[n][0] , cuerpo[n][1]); printf(" ");
     }
 void teclear(){
