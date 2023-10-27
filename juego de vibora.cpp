@@ -68,12 +68,23 @@ void dibujar_cuerpo()/*se encarga de dibujar el cuerpo y ademas el bucle for hac
       gotoxy(cuerpo[i][0] , cuerpo[i][1]); printf("+");
      }
 }
-void borrar_cuerpo()/*se encarga de borrar la posición actual del cuerpo de la vibora. Esto se logra posicionando el cursor en la ubicación actual del cuerpo y reemplazando ese espacio con un espacio en blanco, lo que simula el borrado del contenido en esa ubicación en la pantalla.*/
+void borrar_cuerpo()/*se encarga de borrar la posición actual del cuerpo de la. Esto se logra posicionando el cursor en la ubicación actual del cuerpo y reemplazando ese espacio con un espacio en blanco, lo que simula el borrado del contenido en esa ubicación en la pantalla.*/
 {
      gotoxy(cuerpo[n][0] , cuerpo[n][1]); printf(" ");
     }
-
-void comida()
+void teclear()/*se utiliza para cambiar la dirección de la vibora en función de las teclas presionadas por el usuario. Cuando se presionan las teclas de dirección (ARRIBA, ABAJO, DERECHA o IZQUIERDA), la dirección de la vibora se ajusta según las reglas establecidas, lo que permite qe la viborita  se mueva en la dirección deseada en el juego FULL SNAKE */
+{
+     if(kbhit()){
+            tecla = getch();
+            switch(tecla){
+                case ARRIBA : if(dir != 2) dir = 1; break;
+                case ABAJO : if(dir != 1) dir = 2; break;
+                case DERECHA : if(dir != 4) dir = 3; break;
+                case IZQUIERDA : if(dir != 3) dir = 4; break;
+           }
+     }
+}
+void comida()/*se encarga de gestionar la aparición y el consumo de comida en del juego,lo que esto llega a aumentar el tamaño de la serpiente en el juego . La comida se coloca en una ubicación aleatoria dentro de la pantalla del juego después de ser comida.*/
 {
      if(x == xc && y == yc)
      {
@@ -84,7 +95,7 @@ void comida()
           gotoxy(xc, yc); printf("%c", 4);
      }
 }
-bool game_over()
+bool game_over()/*verifica si el juego ha llegado a su fin, ya sea debido a una colisión con los bordes de la pantalla o una colisión con el propio cuerpo del elemento.*/
 {
      if(y == 3 || y == 23 || x == 2 || x == 77) return false;
      for(int j = tam - 1; j > 0; j--){
