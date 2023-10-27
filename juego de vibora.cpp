@@ -38,20 +38,7 @@ void OcultaCursor() {
  
     SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cci);
 }
-void pintar(){  
-     for(int i=2; i < 78; i++){
-        gotoxy (i, 3); printf ("%c", 205);
-        gotoxy(i, 23); printf ("%c", 205); 
-        }
-     for(int v=4; v < 23; v++){
-        gotoxy (2,v);  printf ("%c", 186);
-        gotoxy(77,v);  printf ("%c", 186); 
-        }
-     gotoxy  (2,3);    printf ("%c", 201);
-     gotoxy (2,23);    printf ("%c", 200);
-     gotoxy (77,3);    printf ("%c", 187);
-     gotoxy(77,23);    printf ("%c", 188); 
-     }  
+ 
 void guardar_posicion(){
      cuerpo[n][0] = x;
      cuerpo[n][1] = y;
